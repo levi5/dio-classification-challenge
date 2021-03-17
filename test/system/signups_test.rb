@@ -10,7 +10,7 @@ class SignupsTest < ApplicationSystemTestCase
     fill_in "Nome",   with: "Anonimo"
     fill_in "E-mail",   with: "anonimo@mail.com"
     fill_in "Senha",  with: "123456"
-    fill_in "Confirme a senha",   with: "123456"
+    fill_in "Confirme sua senha",   with: "123456"
 
     click_on "Cadastrar"
 
