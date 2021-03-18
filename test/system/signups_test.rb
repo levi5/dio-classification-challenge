@@ -1,5 +1,6 @@
 require "application_system_test_case"
 
+
 class SignupsTest < ApplicationSystemTestCase
   test "User register with the correct values" do
     
@@ -11,10 +12,18 @@ class SignupsTest < ApplicationSystemTestCase
     fill_in "E-mail",   with: "anonimo@mail.com"
     fill_in "Senha",  with: "123456"
     fill_in "Confirme sua senha",   with: "123456"
-
+    
     click_on "Cadastrar"
-
+    
     assert_text "Cadastro realizado com sucesso!!!"
+    
+  end
   
+  test "User register with the incorrect values" do
+    visit "/"
+    click_on "Cadastre-se"
+    click_on "Cadastrar"
+    
+    assert_text "Error no cadastro!!!"
   end
 end
