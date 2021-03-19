@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   EMAIL_FORMAT = /[^\s]@[^\s]/
+  
   has_secure_password
 
   validates :name, presence: true 

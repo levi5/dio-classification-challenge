@@ -14,7 +14,8 @@
     <header>
       <p><%= flash.notice %></p>
       <nav>
-        <%= link_to translate("menu.signup"), "/users/new" %>
+        <%= link_to translate("menu.signup"), new_user_path  %>
+        <%= link_to translate("menu.sign"), new_session_path  %>
       </nav>
     </header>
     <%= yield %>
