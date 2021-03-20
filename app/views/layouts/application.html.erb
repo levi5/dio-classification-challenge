@@ -12,10 +12,17 @@
 
   <body>
     <header>
-      <p><%= flash.notice %></p>
+      <p>
+        <%= flash.notice %>
+        <%= flash.alert %>
+      </p>
       <nav>
-        <%= link_to translate("menu.signup"), new_user_path  %>
-        <%= link_to translate("menu.sign"), new_session_path  %>
+        <% if user_signed_in? %>
+        
+        <% else %>
+            <%= link_to translate("menu.signup"), new_user_path  %>
+            <%= link_to translate("menu.sign"), new_session_path  %>
+        <% end %>
       </nav>
     </header>
     <%= yield %>
