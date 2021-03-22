@@ -1,4 +1,5 @@
 pt-BR:
   menu:
     signup: "Cadastre-se"
-    sign: "Entrar"
+    signin: "Entrar"
+    logout: "Sair"
