@@ -8,4 +8,9 @@ class ApplicationController < ActionController::Base
         @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
     end
 
+    def required_logger_user
+        redirect_to new_session_path, alert: "Login necessario!!!" unless user_signed_in?
+    end
+
+
 end

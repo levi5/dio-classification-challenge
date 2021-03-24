@@ -1,6 +1,11 @@
 pt-BR:
   activerecord:
     attributes:
+      ad: 
+        title: "Titulo"
+        description: "Descrição"
+        price: "Preço"
+        images: "Imagens"
       user:
         name: "Nome"
         email: "E-mail"
