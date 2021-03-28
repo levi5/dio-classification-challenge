@@ -1,23 +1,23 @@
-<%= form_for @ad do |form| %>
-
-    <div>
-        <%= form.label :title%>
-        <%= form.text_field :title%>
+<%= form_for @ad, :html => {class: "form_base"} do |form| %>
+    <h1 >Anúncio</h1>
+    <div class="from_group">
+        <%= form.label :title %>
+        <%= form.text_field :title, class: "input_base"%>
     </div>
-    <div>
+    <div class="from_group">
         <%= form.label :description%>
-        <%= form.text_area :description%>
+        <%= form.text_area :description, class: "area-base" %>
     </div>
-    <div>
+    <div class="from_group">
         <%= form.label :price%>
-        <%= form.number_field :price%>
+        <%= form.number_field :price, class: "input_base"%>
     </div>
-    <div>
+    <div class="from_group">
         <%= form.label :images%>
-        <%= form.text_area :images%>
+        <%= form.text_area :images , class: "area-base", placeholder: "Digite aa url \nhttps://image.com \nhttps://image-02.com" %>
     </div>
-    <div>
-        <%= form.submit%>
+    <div class="from_group">
+        <%= form.submit  class: "button_base btn-create" %>
     </div>
 
 <% end %>

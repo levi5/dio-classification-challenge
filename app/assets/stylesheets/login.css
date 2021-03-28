@@ -1,0 +1,6 @@
+.btn-login{
+    width: 100% !important;
+    background:var(--secondary-color);
+    font-weight: bold;
+    color:  var(--white-color);
+}

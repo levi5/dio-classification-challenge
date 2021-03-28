@@ -14,6 +14,17 @@
  *= require_self
  */
 
+ :root{
+     --primary-color:#F4F4F4;
+     --secondary-color:#EE6352;
+     --white-color:#FFF;
+     --text-color:#808070;
+     --title-color:#333333;
+     --input--text-color:#222;
+     --btn-create-color:#16C172;
+
+     /* #218380 */
+ }
  .field_with_errors {
      color: red;
      display: inline-block;
@@ -21,4 +32,165 @@
 
  .field_with_errors input{
      border: 2px solid red;
+ }
+
+
+ *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Roboto', sans-serif;
+ }
+
+html{
+    font-size:62.5%;
+}
+body{
+    height: 100vh;
+}
+ html, body{
+    width: 100%;
+    background: var(--primary-color);
+ }
+
+ header{
+     width: 100%;
+     height:6rem;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 1rem;
+     background:var(--secondary-color);
+ }
+
+ header .logo{
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ header nav{
+     width: auto;
+     height: auto;
+     display: flex;
+     justify-content: center ;
+     align-items: center;
+ }
+
+ header nav .link{
+     padding: 1rem;
+     margin-right: 0.5rem;
+     border-radius: 0.4rem;
+     font-size: 1.6rem;
+     text-decoration: none;
+     list-style: none;
+     outline: none;
+     color: var(--white-color);
+     transition: 1s background ease-in-out, 1s color ease-in-out;
+ }
+ header nav .link:hover{
+     background: var(--white-color);
+     color: var(--text-color);
+ }
+ header .alert{
+    max-width: 20rem;
+    width: auto;
+    height: 100%;
+    padding: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--white-color);
+ }
+
+ main{
+     width: 100%;
+     height: 100%;
+     padding: 2rem;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }
+
+label{
+    margin-bottom: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--title-color);
+}
+
+
+.title-pag{
+    width: 100%;
+    margin-top: 8rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 0.4rem;
+    background: #FFF;
+    font-family: inherit;
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+
+
+.form_base{
+    max-width: 40rem;
+    width: auto;
+    height: auto;
+    padding: 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    border-radius: 0.4rem;
+    background: var(--white-color);
+}
+
+.from_group{
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+button, .link_button, .button_base {
+    padding: 1rem 2rem;
+    border: 0;
+    border-radius: 0.4rem;
+    background: #c5c3bf;
+    color:  var(--white-color);
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.input_base{
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    color: var(input--text-color);
+    background: var(--primary-color);
+ }
+
+ .area-base{
+    min-height: 9rem;
+    min-width: 30rem;
+    padding: 2rem 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 0.4rem;
+    background: var(--primary-color);
+}
+
+
+ img{
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
  }

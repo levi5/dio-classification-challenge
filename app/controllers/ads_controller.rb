@@ -7,8 +7,13 @@ class AdsController < ApplicationController
 
     def create
         @ad = current_user.ads.build(ad_params)
-        if @ad.save
+
+        # byebug
+        unless @ad[:id].blank? && @ad[:title].blank? && @ad[:description].blank? && @ad[:price].blank? && @ad[:images].blank?
+            @ad.save
             redirect_to root_path, notice: "Anúcio criado com sucesso!!!"
+        else 
+            redirect_to new_ad_path, notice: "* Digite todos os valores."
         end
     end
 

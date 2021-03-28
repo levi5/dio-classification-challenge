@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'static/adDetail'
   root to: "home#show"
 
   # get "/users/new", to: "users#new"
